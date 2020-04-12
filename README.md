@@ -13,7 +13,7 @@ require_once('src/Config.php');
 $config = (new Config())->getConfig();
 ```
 
-By default it will look for configs in the same directory it's required in, but you can override it with an option.
+By default it will look for a folder called `config` in the same directory it's required in, but you can override it with an option.
 
 **Override configs path**
 ```
