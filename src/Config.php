@@ -28,7 +28,7 @@ class Config {
 		}
 		foreach ($usable_files_order as $fileName) {
 			if (array_key_exists($fileName, $usable_files)) {
-				$merged_config = array_merge($merged_config, $usable_files[$fileName]);
+				$merged_config = array_replace_recursive($merged_config, $usable_files[$fileName]);
 			}
 		}
 
