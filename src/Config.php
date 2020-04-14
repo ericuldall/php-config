@@ -23,7 +23,7 @@ class Config {
 		$dir = new DirectoryIterator($this->config_dir);
 		foreach ($dir as $fileInfo) {
 			if (!$fileInfo->isDot() && in_array($fileInfo->getFilename(), $usable_files_order)) {
-				$usable_files[$fileInfo->getFilename()] = parse_ini_file($this->config_dir . '/' . $fileInfo->getFilename());
+				$usable_files[$fileInfo->getFilename()] = parse_ini_file($this->config_dir . '/' . $fileInfo->getFilename(), TRUE);
 			}
 		}
 		foreach ($usable_files_order as $fileName) {
